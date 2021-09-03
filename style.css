@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    align-items: center;
+}
+
+
+body {
+    background-color: lightcoral;
+    align-items: center;
+}
+.sectionONP{
+    background-color: white;
+    width: 400px;
+    height: auto;
+}
+.sectionONP li{
+    border: 1px rgb(29, 29, 29) solid;
+    align-items: center;
+}
+.section{
+    background-color: white;
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+    align-items: center;
+}
+
+
+  
