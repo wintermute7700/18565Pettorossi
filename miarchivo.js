@@ -1,15 +1,15 @@
 
 /* ingreso novedades por consola como objetos */
-function Novedad (legajo, operacion, tiempo){
+/* function Novedad (legajo, operacion, tiempo){
     this.legajo = legajo;
     this.operacion = operacion;
     this.tiempo = tiempo;
-}
+} */
 /* console.log = new Novedad (321, 976000, 80); */
 /* operarios.push(Novedad) */
 
-let novedad0 = new Novedad(321,976000,80);
-let novedad1 = new Novedad(218,810000,200);
+/* let novedad0 = new Novedad(321,976000,80);
+let novedad1 = new Novedad(218,810000,200); */
 
 /* let novedadS =[novedad0, novedad1]; */
 /* console.log=new Novedad(324,922144,53) */
@@ -28,7 +28,7 @@ for (const operario of operarios){
 } */
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-let nodoUL =document.getElementById ("ONP")
+/* let nodoUL =document.getElementById ("ONP")
 let newsO = [{legajo:321, operacion: 976144, tiempo: 45},
                 {legajo: 223, operacion: 810000, tiempo: 480},
                 {legajo: 266, operacion: 900177, tiempo: 6},
@@ -43,17 +43,17 @@ for (const news of newsO){
     let contenedor=document.createElement("ul");
     contenedor.innerHTML=`<li> legajo: ${news.legajo} operacion: ${news.operacion} tiempo: ${news.tiempo}</li>`;
     nodoUL.appendChild(contenedor);
-}
+} */
 //-----------------------------------------------------------------------------------------------------------------------------------
 /* ingreso numero legajo */
-let numLeg = parseInt(prompt("Ingrese numero de legajo"));
+/* let numLeg = parseInt(prompt("Ingrese numero de legajo"));
 let legajos = ["218","222","223","238","239","266"];
 for(let i=0; i<legajos.length; i++){
     if (legajos[i] == numLeg){ 
         alert("Operario Correcto" + legajos[i]);
     }
 } 
-
+ */
 //-----------------------------------------------------------------------------------------------------------------------------------
 /* contador onp */
 /* let fabrica = parseInt(prompt("Ingrese numero de fabrica 1 o 2"));
@@ -85,3 +85,53 @@ console.log(operario218.fabrica); */
 /* console.log(operario321.legajo);
 console.log(operario321.nombre);
 console.log(operario321.fabrica); */
+
+/* BOTON PARA AGREGAR ONP */
+let addButton = document.getElementById("addButton")
+addButton.addEventListener("click", addToDoItem);
+
+function addToDoItem(){
+    let itemText = ONPEntry.value;
+    newToDoItem(itemText)
+}
+
+let ONPEntry = document.getElementById("ONPEntry");
+let ONPLista = document.getElementById("ONPList");
+
+function newToDoItem (itemText) {
+    let ONPItem = document.createElement("li");
+    let ONPText = document.createTextNode(itemText);
+    ONPItem.appendChild(ONPText)
+    ONPLista.appendChild(ONPItem)
+}
+/* BOTTON PARA GUARDAR ONP */
+
+let saveButton = document.getElementById("saveButton");
+saveButton.addEventListener("click", saveList);
+
+function saveList(){
+    alert("Clickeaste el boton");
+
+    let toDos = [];
+    let toDoPrimera = [];
+
+    let primera = toDoList.children.item(0);
+    let toDoInfo2 = {
+        "texto": primera.innerText
+    }
+    toDoPrimera.push(toDoInfo2)
+
+    for(let i = 1; i < toDoList.children.length; i++ ){
+
+        let toDo = toDoList.children.item(i);
+
+        let toDoInfo = {
+            "texto": toDo.innerText
+        }
+
+        toDos.push(toDoInfo)
+    }
+
+    localStorage.setItem("listaTareas", JSON.stringify(toDos))
+    localStorage.setItem("primerTarea", JSON.stringify(toDoPrimera))
+}

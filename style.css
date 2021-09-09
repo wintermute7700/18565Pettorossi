@@ -8,8 +8,20 @@
 
 
 body {
-    background-color: lightcoral;
+    background-color: grey;
     align-items: center;
+}
+.boton{
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: rgb(8, 223, 8);
+    border-radius: 5px;
+    align-items: center;
+}
+.boton:hover{
+    background-color: pink;
+    transform: scale(1.1,1.1);
 }
 .sectionONP{
     background-color: white;

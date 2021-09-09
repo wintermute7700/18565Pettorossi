@@ -8,30 +8,28 @@
     <title>Desafio java</title>
 </head>
 <body>
+    <header >
+        <h1>Operaciones No Productivas Bersa</h1>
+    </header>
+    <div class="todo-wrapper">
+        <p>Ingrese operacion</p>
+        <form name="todo-adder">
+            <input type="text" id="ONPEntry"/>
+        </form>
+        <button id="addButton" class="boton">Agregar ONP</button>
+        <button id="saveButton" class="boton">Guardar ONPs</button>
+        <ul id="ONPList" class="sectionONP">
+        </ul>
+    </div>
     <div>
-
-        <header >
-            <h1>Operaciones No Productivas Bersa</h1>
-        </header>
-
-
-        <div>
-            <ul id="ONP" class="sectionONP">
-                <!-- DOM -->
-            </ul>
-        </div>
-        
-        <div>
-            <h2>Explicacion proyecto</h2>
-        En el sector productivo de bersa cada operario al finalizar el dia debe ingresar informacion en una planilla declarando
-        su tiempo productivo para luego el encargado del sector ingresar la informacion al sistema.
-        Los datos requeridos son: Fabrica a la que corresponde(1 o 2), Numero de operario (por ej 321), Numero de operacion (codigo de 6 digitos) y el tiempo destinado a esta tarea.
-        Ademas el horario laboral es diferente en las fabricas, en la 1 se trabaja un total de 9 horas y en la 2 un total de 8 horas.
-        La idea del proyecto es en un futuro reemplazar estas planillas fisicas por una digital.
-        </div>
-
-        
-       <div>
+        <h2>Explicacion proyecto</h2>
+    En el sector productivo de bersa cada operario al finalizar el dia debe ingresar informacion en una planilla declarando
+    su tiempo productivo para luego el encargado del sector ingresar la informacion al sistema.
+    Los datos requeridos son: Fabrica a la que corresponde(1 o 2), Numero de operario (por ej 321), Numero de operacion (codigo de 6 digitos) y el tiempo destinado a esta tarea.
+    Ademas el horario laboral es diferente en las fabricas, en la 1 se trabaja un total de 9 horas y en la 2 un total de 8 horas.
+    La idea del proyecto es en un futuro reemplazar estas planillas fisicas por una digital.
+    </div>
+    <div>
         <h2>Codigos :</h2>
         <ul  class="section"><li>900000(limpieza)</li>
             <li>921000(mantenimiento de maquina)</li>
@@ -51,8 +49,8 @@
             <li>880000(hora gremial)</li>
         </ul>
        </div>
-        <script src="/miarchivo.js"></script>
-        
-    </div>
+    
+    <script src="/miarchivo.js"></script>
+    <footer></footer>
 </body>
 </html>
