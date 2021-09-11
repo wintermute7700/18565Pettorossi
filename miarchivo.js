@@ -110,7 +110,7 @@ let saveButton = document.getElementById("saveButton");
 saveButton.addEventListener("click", saveList);
 
 function saveList(){
-    alert("Operaciones guardadas");
+    alert("Operaciones");
 
     let toDos = [];
     let toDoPrimera = [];
